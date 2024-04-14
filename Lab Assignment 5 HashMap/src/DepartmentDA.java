@@ -15,9 +15,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class DepartmentDA {
-    private HashMap<String, Department> departments = new HashMap<>();
     private HashMap<String, Employee> employeeMap;
-    private EmployeeDA employeeDA;
     public static double salary = 0;
 
     public DepartmentDA() {
@@ -43,7 +41,7 @@ public class DepartmentDA {
 
                 readDepEmp(department);
 
-                departments.put(depCode, department);
+                // departments.put(depCode, department);
 
                 for (Map.Entry<String, Employee> entryMap : department.getEmployeeMap().entrySet()) {
                     totalSalary += entryMap.getValue().getSalary();
